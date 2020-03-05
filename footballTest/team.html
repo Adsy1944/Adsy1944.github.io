@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Football Hub - Teams</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <script src="JS/jquery-3.4.1.min.js"></script>
+  <script src="JS/football.js"></script>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+</head>
+<body class="bg-danger">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="text-center" id="teamHeader" name="teamHeader">Football Hub - </h1>
+      </div>
+      <div class="card-body">
+        <div class="mx-auto">
+          <table class="mx-auto">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Plan</th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody id="teamCompetitions" name="teamCompetitions">
+              <!-- JS Fills this -->
+            </tbody>
+          </table>
+        </div>
+        <div class="mx-auto">
+          <table class="mx-auto">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Born</th>
+                <th>Nationality</th>
+                <th>Shirt Number</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody id="teamPlayers" name="teamPlayers">
+              <!-- JS Fills this -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    getTeamCompetitions(getUrlVars().teamId);
+
+  </script>
+</body>
+</html>
