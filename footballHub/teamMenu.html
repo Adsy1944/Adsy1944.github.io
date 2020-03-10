@@ -13,7 +13,8 @@
 </head>
 <body class="bg-danger">
   <script>
-  var teamId = console.log(getUrlVars().teamId);
+  var teamId = getUrlVars().teamId;
+  console.log(teamId);
   function playersUrl() {
     window.location.href="team.html?teamId=" + teamId;
   }
