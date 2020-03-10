@@ -12,15 +12,22 @@
 
 </head>
 <body class="bg-danger">
+  <script>
+  var teamId = console.log(getUrlVars().teamId);
+  function playersUrl() {
+    window.location.href="team.html?teamId=" + teamId;
+  }
+</script>
   <div class="container" style="margin-top: 2.5%;">
     <div class="card">
       <div class="card-header text-center">
         <h1 class="text-center">Football Hub - Menu</h1>
       </div>
       <div class="card-body">
+        <button onclick="playersUrl()" class="btn-lg btn-danger">Players</button>
+      </div>
+      </div>
+      </div>
 
-      </div>
-      </div>
-      </div>
       </body>
       </html>
