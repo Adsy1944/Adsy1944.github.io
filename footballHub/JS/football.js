@@ -34,7 +34,7 @@ $.ajax(settings).done(function (response) {
   console.log(response);
   $('#teamHeader').append(response.name);
   $.each(response.squad, function (index, list) {
-    $('#teamPlayers').append('<tr><td>' + list.name + '</td><td>' + nullify(list.position) + '</td><td>' + list.dateOfBirth +
+    $('#teamPlayers').append('<tr><td>' + list.name + '</td><td>' + nullify(list.position) + '</td><td>' + datify(list.dateOfBirth) +
     '</td><td>' + list.nationality + '</td><td>' + nullify(list.shirtNumber) + '</td><td>' + nullify(list.role) + '</td></tr>');
   });
 });
@@ -53,10 +53,22 @@ function getTeamCompetitions(num) {
 }
 $.ajax(settings).done(function (response) {
   console.log(response);
-  $.each(response.squad, function (index, list) {
-    $('#teamCompetitions').append('<tr><td>' + list.name + '</td><td>' + list.plan + '</td><td>' + list.updated +
+  $.each(response.activeCompetitions, function (index, list) {
+    $('#competitions').append('<tr><td>' + list.name + '</td><td>' + list.plan + '</td><td>' + datify(list.lastUpdated)
     + '</td></tr>');
   });
+    $('#info').append("<tr><td>Name</td><td>" + response.name
+  + "</td><td rowspan='9'><img src='" + response.crestUrl + "'>"
+  + "</td></tr>"
+  + "<tr><td>Address</td><td>" + response.address + "</td></tr>"
+  + "<tr><td>Telephone</td><td>" + response.phone + "</td></tr>"
+  + "<tr><td>Email</td><td>" + response.email + "</td></tr>"
+  + "<tr><td>Website</td><td>" + response.website + "</td></tr>"
+  + "<tr><td>Venue</td><td>" + response.venue + "</td></tr>"
+  + "<tr><td>Club Colours</td><td>" + response.clubColors + "</td></tr>"
+  + "<tr><td>Founded</td><td>" + response.founded + "</td></tr>"
+  + "<tr><td>Last Updated</td><td>" + response.lastUpdated + "</td></tr>");
+  //})
 });
 }
 // --------------------------------
