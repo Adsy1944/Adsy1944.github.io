@@ -34,8 +34,8 @@ $.ajax(settings).done(function (response) {
   console.log(response);
   $('#teamHeader').append(response.name);
   $.each(response.squad, function (index, list) {
-    $('#teamPlayers').append('<tr><td>' + list.name + '</td><td>' + list.position + '</td><td>' + list.dateOfBirth +
-    '</td><td>' + list.nationality + '</td><td>' + list.shirtNumber + '</td><td>' + list.role + '</td></tr>');
+    $('#teamPlayers').append('<tr><td>' + list.name + '</td><td>' + nullify(list.position) + '</td><td>' + list.dateOfBirth +
+    '</td><td>' + list.nationality + '</td><td>' + nullify(list.shirtNumber) + '</td><td>' + nullify(list.role) + '</td></tr>');
   });
 });
 }
@@ -69,4 +69,44 @@ function getUrlVars() {
     console.log(vars);
     return vars;
 }
+
+
+function getTeamMatches(num) {
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://api.football-data.org/v2/teams/" + num + "/matches/",
+  "method": "GET",
+  "headers": {
+    "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+  }
+}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  $('#matches');
+  $.each(response.matches, function (index, list) {
+    console.log(list.competition.name);
+    $('#matches').append("<tr><td>" + datify(list.utcDate) + "</td><td>" + list.homeTeam.name
+  + "</td><td>" + list.awayTeam.name + "</td><td>" + nullify(list.score.fullTime.homeTeam)
+  + " - " + nullify(list.score.fullTime.awayTeam) + "</td><td>" + list.competition.name
+  + "</td><td>" + list.status + "</td></tr>");
+  });
+});
+}
 // --------------------------------
+//Replaces null values with strings showing ---
+function nullify(string) {
+  if (string == null) {
+    string = "---";
+  }
+  return string;
+}
+
+// --------------------------------
+//
+function datify(jsonDate) {
+    var date = new Date(jsonDate);
+    var newDate = date.getDate() + "/" + (date.getMonth()+1) + "/"
+    + date.getFullYear();
+    return newDate;
+}
