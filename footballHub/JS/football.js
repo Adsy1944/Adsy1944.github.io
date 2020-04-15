@@ -67,7 +67,7 @@ $.ajax(settings).done(function (response) {
   + "<tr><td>Venue</td><td>" + response.venue + "</td></tr>"
   + "<tr><td>Club Colours</td><td>" + response.clubColors + "</td></tr>"
   + "<tr><td>Founded</td><td>" + response.founded + "</td></tr>"
-  + "<tr><td>Last Updated</td><td>" + response.lastUpdated + "</td></tr>");
+  + "<tr><td>Last Updated</td><td>" + datify(response.lastUpdated) + "</td></tr>");
   //})
 });
 }
