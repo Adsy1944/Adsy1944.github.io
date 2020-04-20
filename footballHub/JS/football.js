@@ -115,10 +115,30 @@ function nullify(string) {
 }
 
 // --------------------------------
-//
+//Formats a JSON date to display correctly
 function datify(jsonDate) {
     var date = new Date(jsonDate);
     var newDate = date.getDate() + "/" + (date.getMonth()+1) + "/"
     + date.getFullYear();
     return newDate;
+}
+
+// --------------------------------
+//
+function getCompetition(num) {
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://api.football-data.org/v2/competitions/" + num,
+    "method": "GET",
+    "headers": {
+      "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+    }
+  }
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    $('#title').append(response.name)
+    
+
+    }
 }
