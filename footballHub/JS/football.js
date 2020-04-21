@@ -14,7 +14,7 @@ function getTeams() {
     $.each(response.teams, function(index, list) {
       console.log(list.name);
       var url = "'teamMenu.html?teamId=" + list.id + "'";
-      $('#teamTable').append('<tr><td><label>' + list.name + '</label></td><td><button onclick="window.location.href=' + url + '">Select</button></td></tr>');
+      $('#teamTable').append('<tr><td><button class="btn btn-jg btn-danger" onclick="window.location.href=' + url + '">' + list.name + '</button></td></tr>');
     });
   });
 }
@@ -140,5 +140,5 @@ function getCompetition(num) {
     $('#title').append(response.name);
   });
 
-    
+
 }
