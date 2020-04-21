@@ -14,7 +14,7 @@ function getTeams() {
     $.each(response.teams, function(index, list) {
       console.log(list.name);
       var url = "'teamMenu.html?teamId=" + list.id + "'";
-      $('#teamTable').append('<tr><td><button class="btn btn-jg btn-danger" style="width: 275px;" onclick="window.location.href=' + url + '">' + list.name + '</button></td></tr>');
+      $('#teamTable').append('<tr><td><button class="btn btn-lg btn-danger" style="width: 350px;" onclick="window.location.href=' + url + '">' + list.name + '</button></td></tr>');
     });
   });
 }
