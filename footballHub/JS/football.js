@@ -138,7 +138,7 @@ function getCompetition(num) {
   $.ajax(settings).done(function (response) {
     console.log(response);
     $('#title').append(response.name);
-  );
+  });
 
-    }
+    
 }
