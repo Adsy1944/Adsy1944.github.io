@@ -68,8 +68,7 @@ $.ajax(settings).done(function (response) {
   + "<tr><td>Club Colours</td><td>" + response.clubColors + "</td></tr>"
   + "<tr><td>Founded</td><td>" + response.founded + "</td></tr>"
   + "<tr><td>Last Updated</td><td>" + datify(response.lastUpdated) + "</td></tr>");
-  //})
-});
+  });
 }
 // --------------------------------
 // Converts URL parameters into usable variables.
@@ -81,8 +80,8 @@ function getUrlVars() {
     console.log(vars);
     return vars;
 }
-
-
+// --------------------------------
+//Gets the list of matches for the selected team
 function getTeamMatches(num) {
   var settings = {
   "async": true,
