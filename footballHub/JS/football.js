@@ -28,16 +28,16 @@ function getTeamPlayers(num) {
   "method": "GET",
   "headers": {
     "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
+    }
   }
-}
 $.ajax(settings).done(function (response) {
   console.log(response);
   $('#teamHeader').append(response.name);
   $.each(response.squad, function (index, list) {
     $('#teamPlayers').append('<tr><td>' + list.name + '</td><td>' + nullify(list.position) + '</td><td>' + datify(list.dateOfBirth) +
     '</td><td>' + list.nationality + '</td><td>' + nullify(list.shirtNumber) + '</td><td>' + nullify(list.role) + '</td></tr>');
+    });
   });
-});
 }
 // --------------------------------
 // Gets the team competitions
