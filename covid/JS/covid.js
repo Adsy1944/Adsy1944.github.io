@@ -1,5 +1,7 @@
-var today = new Date();
-today.setDate(today.getDate()-2);
+var dayOne = new Date();
+dayOne.setDate(dayOne.getDate() -1);
+var dayTwo = new Date();
+dayTwo.setDate(dayTwo.getDate() -2);
 var caseTotal = null;
 var deathTotal = null;
 var caseDaily = null;
@@ -10,21 +12,21 @@ var finalDeaths = null;
 //Gets cumulative totals
 function getTotals() {
   var settingsToday = {
-    "async" : true,
-    "crossDomain" : true,
-    "url" : "https://covid-19-data.p.rapidapi.com/country?format=json&name=uk",
-    "method" : "GET",
-    "headers" : {
-      "x-rapidapi-host" : "covid-19-data.p.rapidapi.com",
-      "x-rapidapi-key" : "c6f23c4c02mshb135ec8895eeb2fp156352jsna8e730d46ed9"
-    }
-  }
+    "async": true,
+    "crossDomain": true,
+    "url": "https://covid-19-data.p.rapidapi.com/report/country/code?format=json&date-format=YYYY-MM-DD&date=" + backDate(dayOne) + "&code=gb",
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
+        "x-rapidapi-key": "c6f23c4c02mshb135ec8895eeb2fp156352jsna8e730d46ed9"
+       }
+     }
   $.ajax(settingsToday).done(function(response) {
     console.log(response);
-    $('#caseTotal').append(response[0].confirmed);
-    caseTotal = response[0].confirmed;
-    $('#deathTotal').append(response[0].deaths);
-    deathTotal = response[0].deaths;
+    $('#caseTotal').append(response[0].provinces[0].confirmed);
+    caseTotal = response[0].provinces[0].confirmed;
+    $('#deathTotal').append(response[0].provinces[0].deaths);
+    deathTotal = response[0].provinces[0].deaths;
   });
 }
 
@@ -33,7 +35,7 @@ function getYesterday() {
   var settingsYesterday = {
 	   "async": true,
 	   "crossDomain": true,
-	   "url": "https://covid-19-data.p.rapidapi.com/report/country/code?format=json&date-format=YYYY-MM-DD&date=" + backDate(today) + "&code=gb",
+	   "url": "https://covid-19-data.p.rapidapi.com/report/country/code?format=json&date-format=YYYY-MM-DD&date=" + backDate(dayTwo) + "&code=gb",
 	   "method": "GET",
 	   "headers": {
 		     "x-rapidapi-host": "covid-19-data.p.rapidapi.com",
