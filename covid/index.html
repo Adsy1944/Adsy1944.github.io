@@ -4,6 +4,7 @@
   <title>COVID19 Dashboard</title>
   <meta name="description" content="AdsysCorner - COVID19 Dashboard">
   <meta name="author" content="SitePoint">
+  <meta http-equiv="refresh" content="3600">
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="JS/covid.js"></script>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -16,7 +17,7 @@
   <div class="container" style="margin-top: 2.5%;">
     <div class="card">
       <div class="card-header text-center">
-        <h1 class="text-center">COVID Dashboard - Menu</h1>
+        <h1 class="text-center">COVID Dashboard</h1>
       </div>
       <div class="card-body mx-auto">
         <table class="mx-auto">
@@ -42,31 +43,32 @@
           </tr>
         </table>
         <br/>
-        <h3 class="mx-auto">Daily Cases</h3>
-        <table class="mx-auto">
-          <tr id="caseDate" name="caseDate">
-            <!-- JS will supply days here -->
+        <table>
+          <tr>
+            <td class="mx-auto">
+              <h3>Daily Cases</h3>
+            </td>
+            <td style="width: 50px;">
+            </td>
+            <td class="mx-auto">
+              <h3>Daily Deaths</h3>
+            </td>
           </tr>
-          <tr id="caseData" name="caseData">
-            <th id="caseDate1" name="casedate1"/>
-            <td id="caseData1" name="caseData1"/>
-            <!-- JS will supply daily data here -->
-          </tr>
-        </table>
-        <h3>Daily Deaths</h3>
-        <table class="mx-auto">
-          <tr id="deathDate" name="deathDate">
-            <!-- JS will supply days here -->
-          </tr>
-          <tr id="deathData" name="deathData">
-            <!-- JS will supply daily data here -->
+          <tr>
+            <td class="text-center">
+              <h4 id="dailyCases" name="dailyCases"></h4>
+            </td>
+            <td/>
+            <td class="text-center">
+              <h4 id="dailyDeaths" name="dailyDeaths"></h4>
+            </td>
           </tr>
         </table>
       </div>
     </div>
   </div>
   <script>
-  var today = new Date();
     getTotals();
+    setTimeout(function() {getYesterday();}, 2000);
   </script>
 </body>
