@@ -4,7 +4,7 @@
   <title>COVID19 Dashboard</title>
   <meta name="description" content="AdsysCorner - COVID19 Dashboard">
   <meta name="author" content="SitePoint">
-  <meta http-equiv="refresh" content="3600">
+  <!--<meta http-equiv="refresh" content="3600">-->
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="JS/covid.js"></script>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -72,9 +72,6 @@
   </div>
   <script>
     getTotals();
-    setTimeout(function() {getYesterday();}, 2000);
-    var date = new Date();
-    date.setDate(date.getDate()-1);
-    $('#date').append(datify(date));
+    
   </script>
 </body>
