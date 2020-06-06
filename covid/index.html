@@ -9,7 +9,7 @@
   <script src="../js/bootstrap.min.js"></script>
   <script src="JS/covid.js"></script>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
-  
+
 </head>
 <body class="bg-info">
   <nav class="bg-dark">
@@ -23,15 +23,15 @@
         <h1 class="text-center">COVID</h1>
       </div>
       <div class="card-body mx-auto">
-        <p>
-          &emsp;I built the COVID19 dashboard as I didn't want to have to scroll all the way theough the government web page
+        <p class="text-center">
+          I built the COVID19 dashboard as I didn't want to have to scroll all the way through the government web page
           just to get the daily figures of Coronavirus cases and deaths. I used this opportunity to practice targeting
           attributes of certain JSON objects and my JavaScript skills in general. The page performs two API calls;
           the first calls the latest total figures, which is returned from the server with the date of the data. I then
           calculate the day before and ask for that day's data (so it'll either be today and yesterday, or yesterday and the
           day before, depending on availability of data), then I find the difference between the total figures to give
-          me the daily figures.<br/>
-          &emsp;Data id courtesy of Grimzivi's COVID-19 Data via RapidAPI.
+          me the daily figures.<br/><br/>
+          Data id courtesy of Grimzivi's COVID-19 Data via RapidAPI.
         </p>
         <div class="mx-auto text-center">
           <button class="mx-auto text-center btn btn-lg btn-info" onclick="window.location.href='dashboard.html'">On to COVID19 Dashboard</button>
