@@ -19,12 +19,12 @@
       <div class="col-sm-10">
   <div class="container" style="margin-top: 2.5%;">
     <div class="card">
-      <div class="card-header text-center">
-        <h1 class="text-center">Adsy's Corner</h1>
+      <div class="card-header">
+        <h1>Adsy's Corner</h1>
       </div>
       <div class="card-body">
-        <div id="here" name="here" class="text-center">
-          <p class="text-center mx-auto">
+        <div id="here" name="here">
+          <p class="mx-auto">
             <h4>Welcome to my little corner of the internet!</h4><br/>
             I have built this site to showcase my work, as a live profile of my abilities and achievements in the development world.
             On the right hand side you will find a menu that will allow you to access my various projects. Please feel free to browse and make use
@@ -37,18 +37,34 @@
     </div>
     <br/>
     <div class="card">
-      <div class="card-body text-center">
+      <div class="card-body">
+        <p>
+          <h4>New Blog!</h4>
+          9 June 2020<br/>
+          Issue 1 of my blog has now been posted, check it out by clicking the link below!
+        </p>
+        <div class="text-center">
+          <button class="btn btn-lg btn-dark" onclick="window.location.href='blog/index.html'">Welcome to Adsy's Corner</button>
+        </div>
+        <br/>
+      </div>
+    </div>
+    <br/>
+    <div class="card">
+      <div class="card-body">
         <p>
           <h4>COVID19</h4>
           5 June 2020<br/>
           I decided to create a COVID-19 dashboard that is much simpler to use if you just want to look at the
           total and daily figures, compared to the UK gov website. This can currently only handle one person at
           a time, as it uses a free subscription to the data. If you like what you see, and want to help out,
-          please consider making a donation so that I can apply a paid subscriptiom to the service so that more people can
+          please consider making a donation so that I can apply a paid subscription to the service so that more people can
           benefit.<br/>
+        </p>
+        <div class="text-center">
           <button class="btn btn-lg btn-dark" onclick="window.location.href='covid/index.html'">COVID19</button>
           <button class="btn btn-lg btn-dark" onclick="window.location.href='https://paypal.me/adsy1944'">Donate</button>
-        </p>
+        </div>
       </div>
     </div>
   </div>
@@ -59,6 +75,11 @@
       <tr>
         <td>
           <button class="btn btn-lg btn-dark" onclick="window.location.href='news.html'">News</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn btn-lg btn-dark" onclick="window.location.href='blog/index.html'">Blog</button>
         </td>
       </tr>
       <tr>
@@ -78,3 +99,5 @@
   </nav>
 </div>
 </div>
+<br/>
+</body>
