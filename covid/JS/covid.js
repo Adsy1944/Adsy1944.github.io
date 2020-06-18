@@ -41,6 +41,7 @@ function getDay(date){
      }
   }
   $.ajax(settingsDate).done(function(response) {
+    console.log(response);
     dailyCases = response[0].provinces[0].confirmed;
     $('#dailyCases').append(totalCases - dailyCases);
     dailyDeaths = response[0].provinces[0].deaths;
