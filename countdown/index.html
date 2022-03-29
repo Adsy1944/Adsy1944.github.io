@@ -63,6 +63,46 @@
 
         }, 1000);
 
+        var httpRequest = new XMLHttpRequest();
+
+       httpRequest.onreadystatechange = function() {
+           if(this.readyState == 4 && this.status == 200) {
+               console.log(this.responseText);
+           }
+       }
+
+        httpRequest.open("GET", "http://localhost:8080/weather");
+
+        httpRequest.send();
+
+        var weatherSettings = {
+            // "async": true,
+            // "crossDomain": false,
+            "url": "localhost:8080/weather",
+            "method": "GET",
+            // "origin": "http://localhost:80",
+            // "mode": "cors",
+            // "dataType": "json",
+            // "headers": {
+            //     "accept": "application/json",
+            //     "Access-Control-Allow-Origin": "*",
+            // }          
+        };
+
+        // $.ajax(weatherSettings).done(function (response) {
+        //     console.log(response);
+        // });
+
+        // const xhr = new XMLHttpRequest();
+        // const url = 'http://ws1.metcheck.com/ENGINE/v9_0/json.asp?lat=50.9&lon=-3.3&lid=58945&Fc=No';
+
+        // xhr.open('GET', url);
+        // xhr.onreadystatechange = someHandler;
+        // xhr.send();
+
+        // var weather = fetch("http://ws1.metcheck.com/ENGINE/v9_0/json.asp?lat=50.9&lon=-3.3&lid=58945&Fc=No");
+        // console.log(weather);
+
     </script>
 
 </head>
