@@ -24,7 +24,7 @@ function getTeamPlayers(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num,
+  "url": "https://api.football-data.org/v4/teams/" + num,
   "method": "GET",
   "headers": {
     "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
@@ -45,7 +45,7 @@ function getTeamCompetitions(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num,
+  "url": "https://api.football-data.org/v4/teams/" + num,
   "method": "GET",
   "headers": {
     "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
@@ -86,7 +86,7 @@ function getTeamMatches(num) {
   var settings = {
   "async": true,
   "crossDomain": true,
-  "url": "http://api.football-data.org/v2/teams/" + num + "/matches/",
+  "url": "https://api.football-data.org/v4/teams/" + num + "/matches/",
   "method": "GET",
   "headers": {
     "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
@@ -128,7 +128,7 @@ function getCompetition(num) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.football-data.org/v2/competitions/" + num,
+    "url": "https://api.football-data.org/v4/competitions/" + num,
     "method": "GET",
     "headers": {
       "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
