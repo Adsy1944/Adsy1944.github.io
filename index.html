@@ -1,117 +1,41 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Adsy's Corner</title>
-  <meta name="description" content="Adsy's Corner - Various little apps in my little corner of the internet">
+  <title>Football Hub</title>
+  <meta name="description" content="AdsysCorner - FootballHub">
   <meta name="author" content="Adam Crofts">
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script data-ad-client="ca-pub-3319397715019947" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-<body style="background-image: url('img/SpaceWallpaper.jpg');">
-  <nav class="bg-dark">
-    <button class="btn btn-lg btn-dark" onclick="window.location.href='index.html'">Adsy's Corner</button>
-  </nav>
-  <div class="row">
+  <script src="JS/jquery-3.6.3.min.js"></script>
+  <script src="JS/football.js"></script>
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
 
-      <div class="col-sm-10">
+</head>
+<body class="bg-danger">
+  <nav class="bg-dark">
+    <button class="btn btn-lg btn-dark" onclick="window.location.href='/index.html'">AdsysCorner</button>
+  </nav>
   <div class="container" style="margin-top: 2.5%;">
     <div class="card">
-      <div class="card-header">
-        <h1>Adsy's Corner</h1>
+      <div class="card-header text-center">
+        <h1 class="text-center">Football Hub - Menu</h1>
       </div>
       <div class="card-body">
         <div id="here" name="here">
-          <p class="mx-auto">
-            <h4>Welcome to my little corner of the internet!</h4><br/>
-            I have built this site to showcase my work, as a live profile of my abilities and achievements in the development world.
-            On the right hand side you will find a menu that will allow you to access my various projects. Please feel free to browse and make use
-            of anything that you find useful.<br/>
-            <!--&emsp;If you would like to learn a little bit more about me and why I created this site, then please click on the "About" link on the right. -->
-          </p>
         </div>
-      </div>
-      <br/>
-    </div>
-    <br/>
-    <div class="card">
-      <div class="card-body">
-        <p>
-          <h4>New Blog!</h4>
-          23 October 2020<br/>
-          Issue 6 of my blog out now!, check it out by clicking the link below!
-        </p>
-        <div class="text-center">
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='blog/index.html'">Adsys Blog</button>
-        </div>
-        <br/>
-      </div>
-    </div>
-    <br/>
-    <div class="card">
-      <div class="card-body">
-        <p>
-          <h4>New Blog!</h4>
-          5 October 2020<br/>
-          My blog is now starting to get underway, check it out by clicking the link below!
-        </p>
-        <div class="text-center">
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='blog/index.html'">Adsys Blog</button>
-        </div>
-        <br/>
-      </div>
-    </div>
-    <br/>
-    <div class="card">
-      <div class="card-body">
-        <p>
-          <h4>COVID19</h4>
-          5 June 2020<br/>
-          I decided to create a COVID-19 dashboard that is much simpler to use if you just want to look at the
-          total and daily figures, compared to the UK gov website. This can currently only handle one person at
-          a time, as it uses a free subscription to the data. If you like what you see, and want to help out,
-          please consider making a donation so that I can apply a paid subscription to the service so that more people can
-          benefit.<br/>
-        </p>
-        <div class="text-center">
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='covid/index.html'">COVID19</button>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='https://paypal.me/adsy1944'">Donate</button>
-        </div>
+        <table class="mx-auto">
+          <tr>
+            <td>
+              <button class="btn-lg btn-danger" style="width:275px;" onclick="window.location.href='teams.html?'">Teams</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn-lg btn-danger" style="width:275px;" onclick="window.location.href='competitions.html'">Competitions</button>
+            </td>
       </div>
     </div>
   </div>
-</div>
-<div class="col-sm-2">
-  <nav class="bg-dark">
-    <table class="mx-auto">
-      <tr>
-        <td>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='news.html'">News</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='blog/index.html'">Blog</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='covid/index.html'">COVID19</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='footballHub/index.html'">Football Hub</button>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button class="btn btn-lg btn-dark" onclick="window.location.href='donate.html'">Donate</button>
-    </table>
-  </nav>
-</div>
-</div>
-<br/>
+  <script></script>
 </body>
+</html>
