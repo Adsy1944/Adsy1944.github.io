@@ -3,7 +3,7 @@ function getTeams() {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://api.football-data.org/v4/teams/",
+    "url": "https://api.football-data.org/v4/teams/",
     "method": "GET",
     "headers": {
       "X-Auth-Token": "cee1ec9bfa2c424bab6141c97368c6cd"
