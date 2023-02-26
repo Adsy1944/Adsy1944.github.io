@@ -1,0 +1,37 @@
+URL = http://api.football-data.org/
+KEY = cee1ec9bfa2c424bab6141c97368c6cd
+
+ID = 64
+NAME - Liverpool FC
+
+/v2/teams/64
+Shows:  League and tier
+        Club details
+        Player details
+
+/v2/teams/64/matches
+Shows:  Match Scores
+        Teams played
+        Referee details
+
+/v2/players/id
+Shows:  Player details
+
+/v2/players/id/matches
+Shows:  Matches for player
+
+
+<div class="mx-auto">
+  <table class="mx-auto">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Plan</th>
+        <th>Updated</th>
+      </tr>
+    </thead>
+    <tbody id="teamCompetitions" name="teamCompetitions">
+      <!-- JS Fills this -->
+    </tbody>
+  </table>
+</div>
